@@ -1,0 +1,5 @@
+---
+packages:
+ - elasticsearch
+services:
+ - elasticsearch

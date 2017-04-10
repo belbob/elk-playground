@@ -1,0 +1,19 @@
+---
+- name: Install elasticsearch.repo
+  copy:
+    src: elasticsearch.repo
+    dest: /etc/yum.repos.d/elasticsearch.repo
+
+- name: Download and install Elasticsearch Signing Key
+  rpm_key:
+    state: present
+    key: https://artifacts.elastic.co/GPG-KEY-elasticsearch
+
+- name: Ensure some packages are installed
+  yum:
+    pkg: "{{ item }}"
+    state: latest
+  with_items: "{{ packages }}"
+  when: packages is defined
+  tags:
+    - install

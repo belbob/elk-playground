@@ -16,6 +16,12 @@ Vagrant.configure(2) do |config|
 
   config.vm.box = "centos/7"
 
+  config.vm.provider :libvirt do |domain|
+    domain.memory = 2048
+    domain.cpus = 1
+    domain.volume_cache = 'none'
+  end
+
   config.hostmanager.manage_host = true
   config.hostmanager.manage_guest = false
   config.hostmanager.include_offline = true
