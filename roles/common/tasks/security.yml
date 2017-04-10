@@ -1,0 +1,31 @@
+---
+- name: Enforcing SELinux
+  selinux:
+    policy: targeted
+    state: "{{ selinux_state }}"
+  tags:
+    - security
+
+- name: enable some services for firewalld
+  firewalld:
+    service: "{{ item }}"
+    permanent: true
+    state: enabled
+  with_items: "{{ firewalld_services_enabled }}"
+  when: firewalld_services_enabled is defined
+  notify:
+    - restart firewalld
+  tags:
+    - security
+
+- name: enable some ports for firewalld
+  firewalld:
+    port: "{{ item }}"
+    permanent: true
+    state: enabled
+  with_items: "{{firewalld_ports_enabled}}"
+  when: firewalld_ports_enabled is defined
+  notify:
+    - restart firewalld
+  tags:
+    - security

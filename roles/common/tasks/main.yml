@@ -1,0 +1,5 @@
+---
+- include: install.yml  # install pkgs
+- include: services.yml  # running services
+- include: security.yml # config firewall
+- include: hosts.yml

@@ -1,0 +1,14 @@
+---
+#
+# see Vagrantfile
+#
+- hosts: all
+  user: vagrant
+  become: true
+  gather_facts: True
+
+  vars_files:
+  - all_vars.yml
+
+  roles:
+  - common

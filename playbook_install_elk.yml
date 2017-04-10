@@ -1,0 +1,18 @@
+---
+#
+# howto use:
+# edit hosts file
+# edit if needed all_vars.yml
+# ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.xxx.xxx
+# ansible-playbook -i hosts playbook_install_elk.yml --extra-vars "target=elk"
+#
+- hosts: '{{ target }}'
+  user: root             # or some adminuser
+  become: true
+  gather_facts: True
+
+  vars_files:
+  - all_vars.yml
+
+  roles:
+  - common

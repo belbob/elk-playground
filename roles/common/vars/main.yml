@@ -1,0 +1,17 @@
+---
+packages:
+ - wget
+ - ntp
+ - firewalld
+ - cockpit
+ - java-1.8.0
+services:
+ - sshd
+ - ntpd
+ - firewalld
+sockets:
+ - cockpit.socket
+firewalld_services_enabled:
+ - ssh
+firewalld_ports_enabled:
+ - 9090/tcp
