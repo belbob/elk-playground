@@ -65,12 +65,12 @@ make sure you have installed dependencies:
 # yum -y install epel-release
 # yum -y install git ansible
 ```
-clone glpi-playground
+clone elk-playground
 
 ```ShellSession
 # git clone https://github.com/belbob/elk-playground.git
 ```
-goto glpi-playgroung
+goto elk-playground
 
 ```ShellSession
 # cd elk-playground
