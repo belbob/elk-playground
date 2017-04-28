@@ -1,0 +1,7 @@
+---
+- name: config nginx
+  template:
+    src: kibana.conf.j2
+    dest: /etc/nginx/conf.d/kibana.conf
+  notify:
+    - restart nginx

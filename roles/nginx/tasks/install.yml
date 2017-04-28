@@ -1,0 +1,19 @@
+---
+- name: Ensure some repos are installed
+  yum:
+    pkg: "{{ item }}"
+    state: installed
+  with_items: "{{ repos }}"
+  when: repos is defined
+  tags:
+    - install
+
+- name: Ensure some packages are installed
+  yum:
+    pkg: "{{ item }}"
+    state: latest
+#    enablerepo: "{{ required_repos }}"
+  with_items: "{{ packages }}"
+  when: packages is defined
+  tags:
+    - install

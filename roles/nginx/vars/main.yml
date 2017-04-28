@@ -1,0 +1,12 @@
+---
+repos:
+ - epel-release
+packages:
+ - libsemanage-python
+ - nginx
+services:
+ - nginx
+firewalld_services_enabled:
+ - http
+set_sebooleans:
+ - httpd_can_network_connect

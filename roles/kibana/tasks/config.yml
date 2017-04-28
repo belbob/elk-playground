@@ -1,0 +1,6 @@
+---
+- name: enable kibana to whole network
+  replace:
+    dest: /etc/kibana/kibana.yml
+    regexp: '^#server.host: "localhost"'
+    replace: 'server.host: "0.0.0.0"'

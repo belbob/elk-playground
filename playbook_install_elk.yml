@@ -16,3 +16,9 @@
 
   roles:
   - common
+  - elastic
+  - kibana
+  - nginx
+  - logstash
+  - beats
+#  - xpacks

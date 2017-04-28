@@ -1,7 +1,7 @@
 ---
 packages:
- - elasticsearch
+ - kibana
 services:
- - elasticsearch
+ - kibana
 firewalld_ports_enabled:
- - 9200/tcp
+ - 5601/tcp

@@ -1,0 +1,15 @@
+---
+packages:
+ - filebeat
+ - packetbeat
+ - metricbeat
+ - heartbeat
+# - beatname
+services:
+ - filebeat
+ - packetbeat
+ - metricbeat
+ - heartbeat
+# - beatname
+firewalld_ports_enabled:
+ - 5044/tcp

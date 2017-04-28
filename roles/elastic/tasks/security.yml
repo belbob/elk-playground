@@ -1,0 +1,12 @@
+---
+- name: enable some ports for firewalld
+  firewalld:
+    port: "{{ item }}"
+    permanent: true
+    state: enabled
+  with_items: "{{firewalld_ports_enabled}}"
+  when: firewalld_ports_enabled is defined
+  notify:
+    - restart firewalld
+  tags:
+    - security

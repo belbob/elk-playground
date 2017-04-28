@@ -1,0 +1,17 @@
+---
+- name: logstash config input with beats
+  copy:
+    src: 02-beats-input.conf
+    dest: /etc/logstash/conf.d/02-beats-input.conf
+
+- name: logstash config filter
+  copy:
+    src: 10-syslog-filter.conf
+    dest: /etc/logstash/conf.d/10-syslog-filter.conf
+
+- name: logstash config output to elasticsearch
+  copy:
+    src: 30-elasticsearch-output.conf
+    dest: /etc/logstash/conf.d/30-elasticsearch-output.conf
+  notify:
+    - restart logstash

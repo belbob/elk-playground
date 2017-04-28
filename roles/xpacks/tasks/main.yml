@@ -1,0 +1,3 @@
+---
+- include: elastic_xpack.yml  # install x-pack
+- include: kibana_xpack.yml  # install x-pack

@@ -1,0 +1,5 @@
+---
+- name: Install x-pack for elasticsearch
+  command: bin/elasticsearch-plugin install x-pack --batch chdir=/usr/share/elasticsearch/
+  notify:
+    - restart elasticsearch

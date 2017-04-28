@@ -1,0 +1,12 @@
+filebeat.prospectors:
+- input_type: log
+  paths:
+  - /var/log/*.log
+  - /var/log/*/*.log
+  - /var/log/*/*/*.log
+output.logstash:
+  hosts: ["localhost:5044"]
+  index: filebeat
+  bulk_max_size: 1024
+logging.files:
+  rotateeverybytes: 10485760  # = 10MB

@@ -1,0 +1,22 @@
+---
+- name: set SELinux booleans
+  seboolean:
+    name: "{{ item }}"
+    state: yes
+    persistent: yes
+  with_items: "{{ set_sebooleans }}"
+  when: set_sebooleans is defined
+  tags:
+    - security
+
+- name: enable some services for firewalld
+  firewalld:
+    service: "{{ item }}"
+    permanent: true
+    state: enabled
+  with_items: "{{ firewalld_services_enabled }}"
+  when: firewalld_services_enabled is defined
+  notify:
+    - restart firewalld
+  tags:
+    - security

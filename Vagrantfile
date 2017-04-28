@@ -17,8 +17,8 @@ Vagrant.configure(2) do |config|
   config.vm.box = "centos/7"
 
   config.vm.provider :libvirt do |domain|
-    domain.memory = 2048
-    domain.cpus = 1
+    domain.memory = 4096
+    domain.cpus = 2
     domain.volume_cache = 'none'
   end
 

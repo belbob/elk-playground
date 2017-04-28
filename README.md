@@ -78,7 +78,7 @@ goto glpi-playgroung
 Edit hosts file and change the hostname and IP-address before run:
 
 ```ShellSession
-# ansible-playbook -i hosts -c local site.yml
+# ansible-playbook -i hosts -c local playbook_install_elk.yml
 ```
 
 ## some issues

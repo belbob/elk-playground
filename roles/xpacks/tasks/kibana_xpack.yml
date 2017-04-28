@@ -1,0 +1,5 @@
+---
+- name: Install x-pack for kibana
+  command: bin/kibana-plugin install x-pack chdir=/usr/share/kibana/
+  notify:
+    - restart kibana

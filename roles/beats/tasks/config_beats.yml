@@ -1,0 +1,7 @@
+---
+- name: config filebeat
+  copy:
+    src: filebeat.yml
+    dest:  /etc/filebeat/filebeat.yml
+  notify:
+  - restart filebeat

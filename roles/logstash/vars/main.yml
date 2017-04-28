@@ -1,7 +1,7 @@
 ---
 packages:
- - elasticsearch
+ - logstash
 services:
- - elasticsearch
+ - logstash
 firewalld_ports_enabled:
- - 9200/tcp
+ - 5044/tcp
