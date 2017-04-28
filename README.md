@@ -25,7 +25,7 @@ When cloning, choose a more suiteable  name for the target directory!
 ```ShellSession
 $ git clone https://github.com/belbob/elk-playground.git my-elk-playground
 ```
-After cloning, it's best to remove the `.git` directory and initialise a new repository. The history of the code is most probably irrelevant for your glpi-playground project...
+After cloning, it's best to remove the `.git` directory and initialise a new repository. The history of the code is most probably irrelevant for your elk-playground project...
 
 ### Installation elk-playground with Vagrant
 
@@ -83,6 +83,7 @@ Edit hosts file and change the hostname and IP-address before run:
 
 ## some issues
 
+If you see only the nginx page, add ip and fqdn to the /etc/hosts file, or even beter, add to your dns-server.
 
 ## Contributing
 
