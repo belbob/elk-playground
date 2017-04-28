@@ -52,7 +52,7 @@ $ ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.xxx.xxx
 ```
 
 ```ShellSession
-$ ansible-playbook -i hosts site.yml
+$ ansible-playbook -i hosts playbook_install_elk.yml
 ```
 
 ### Installation glpi-playground on a local machine
