@@ -55,7 +55,7 @@ $ ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.xxx.xxx
 $ ansible-playbook -i hosts playbook_install_elk.yml --extra-vars "target=see_hosts_file"
 ```
 
-### Installation glpi-playground on a local machine
+### Installation elk-playground on a local machine
 
 Create a updated machine with a CentOS/7 - minimal install. Use use a fix IP-address.
 
