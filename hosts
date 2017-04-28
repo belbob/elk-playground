@@ -1,3 +1,3 @@
 [elk]
-elk.belbob.thuis ansible_host=192.168.122.97
+elk2.belbob.thuis ansible_host=192.168.122.17
 

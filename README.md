@@ -52,7 +52,7 @@ $ ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.xxx.xxx
 ```
 
 ```ShellSession
-$ ansible-playbook -i hosts playbook_install_elk.yml
+$ ansible-playbook -i hosts playbook_install_elk.yml --extra-vars "target=see_hosts_file"
 ```
 
 ### Installation glpi-playground on a local machine
@@ -78,7 +78,7 @@ goto glpi-playgroung
 Edit hosts file and change the hostname and IP-address before run:
 
 ```ShellSession
-# ansible-playbook -i hosts -c local playbook_install_elk.yml
+# ansible-playbook -i hosts -c local playbook_install_elk.yml --extra-vars "target=see_hosts_file"
 ```
 
 ## some issues
