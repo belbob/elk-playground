@@ -17,4 +17,4 @@
   - nginx
   - logstash
   - beats
-#  - xpacks
+#  - xpacks  # user: elastic with the password changeme

@@ -2,4 +2,3 @@
 #selinux_state: permissive
 selinux_state: enforcing
 time_zone: Europe/Brussels
-
