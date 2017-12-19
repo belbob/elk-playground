@@ -1,7 +1,7 @@
 ---
 - name: Install elasticsearch.repo
-  copy:
-    src: elasticsearch.repo
+  template:
+    src: elasticsearch.repo.j2
     dest: /etc/yum.repos.d/elasticsearch.repo
 
 - name: Download and install Elasticsearch Signing Key

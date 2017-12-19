@@ -1,7 +1,7 @@
 ---
 - name: Install logstash.repo
-  copy:
-    src: logstash.repo
+  template:
+    src: logstash.repo.j2
     dest: /etc/yum.repos.d/logstash.repo
 
 - name: Download and install Elasticsearch Signing Key

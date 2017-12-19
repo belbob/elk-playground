@@ -1,7 +1,7 @@
 ---
 - name: Install kibana.repo
-  copy:
-    src: kibana.repo
+  template:
+    src: kibana.repo.j2
     dest: /etc/yum.repos.d/kibana.repo
 
 - name: Download and install Elasticsearch Signing Key

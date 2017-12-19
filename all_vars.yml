@@ -2,3 +2,6 @@
 #selinux_state: permissive
 selinux_state: enforcing
 time_zone: Europe/Brussels
+
+# elk-version
+elk_version: 6.x

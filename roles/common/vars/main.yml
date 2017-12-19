@@ -4,6 +4,8 @@ packages:
  - ntp
  - firewalld
  - cockpit
+ - cockpit-storaged
+ - cockpit-packagekit
  - java-1.8.0
 services:
  - sshd

@@ -3,13 +3,17 @@ packages:
  - filebeat
  - packetbeat
  - metricbeat
- - heartbeat
+# - heartbeat  ## 5.x
+ - heartbeat-elastic  ## 6.x
+ - auditbeat  ## 6.x
 # - beatname
 services:
  - filebeat
  - packetbeat
  - metricbeat
- - heartbeat
+# - heartbeat  ## 5.x
+ - heartbeat-elastic  ## 6.x
+ - auditbeat  ## 6.x
 # - beatname
 firewalld_ports_enabled:
  - 5044/tcp
